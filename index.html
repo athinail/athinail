@@ -6,10 +6,10 @@
         /* Add some basic styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #000;  /* Start with a black background */
             margin: 0;
             padding: 0;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.5s ease;  /* Smooth transition */
         }
         header {
             background-color: #4CAF50;
@@ -53,4 +53,51 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Athina. Welcome to my creative space.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are some of my cool projects:</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:athina.ilioudi@gmail.com">email@example.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2023 by Athina </p>
+    </footer>
+
+    <script>
+        // Initialize variables to keep track of the scroll position
+        let lastScrollTop = 0;
+
+        // Add an event listener for the scroll event
+        window.addEventListener("scroll", function() {
+            // Get current scroll position
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Compare current scroll position with the last scroll position
+            if (scrollTop > lastScrollTop){
+                // Scrolling down
+                document.body.style.backgroundColor = "white";
+            } else {
+                // Scrolling up
+                document.body.style.backgroundColor = "black";
+            }
+
+            // Update the last scroll position
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+    </script>
+</body>
+</html>
