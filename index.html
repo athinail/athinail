@@ -15,24 +15,38 @@
             margin: 15px;
             padding: 15px;
             background-color: #fff;
-            min-height: 100vh;  /* Making the section scrollable */
+            min-height: 100vh;  /* Making each section as tall as the viewport */
         }
         /* ... (rest of your CSS) ... */
     </style>
 </head>
 <body>
-    <!-- Your HTML content -->
-    <script>
-        let lastScrollTop = 0;
-        window.addEventListener("scroll", function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop){
-                document.body.style.backgroundColor = "white";
-            } else {
-                document.body.style.backgroundColor = "black";
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }, false);
-    </script>
-</body>
-</html>
+
+    <!-- Your HTML content here (header, nav, sections, footer) -->
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Athina. Welcome to my creative space.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are some of my cool projects:</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:athina.ilioudi@gmail.com">email@example.com</a>.</p>
+    </section>
+
+    <footer>
+        <p
