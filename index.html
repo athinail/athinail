@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Creative GitHub Pages Website</title>
+    <title>My GitHub Pages Website</title>
     <style>
         /* Add some basic styling */
         body {
@@ -9,19 +9,18 @@
             background-color: #000;
             margin: 0;
             padding: 0;
-            transition: background-color 0.5s ease;
+            transition: background-color 1s ease; /* Add a transition for smooth color change */
         }
         section {
             margin: 15px;
             padding: 15px;
             background-color: #fff;
-            min-height: 100vh;  /* Making each section as tall as the viewport */
+            min-height: 100vh;
         }
         /* ... (rest of your CSS) ... */
     </style>
 </head>
 <body>
-
     <!-- Your HTML content here (header, nav, sections, footer) -->
     <header>
         <h1>Welcome to My Website</h1>
@@ -49,4 +48,24 @@
     </section>
 
     <footer>
-        <p
+        <p>Copyright &copy; 2023 by Athina </p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop){
+                setTimeout(() => {
+                    document.body.style.backgroundColor = "#fff";
+                }, 50);
+            } else {
+                setTimeout(() => {
+                    document.body.style.backgroundColor = "#000";
+                }, 50);
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+    </script>
+</body>
+</html>
